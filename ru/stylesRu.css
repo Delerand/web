@@ -1,0 +1,24 @@
+.links-dropdown {
+    margin-left: -2rem;
+}
+.links-dropdown a {
+    margin-left: 2rem;
+}
+
+@media (max-width: 1290px) {
+  .langs-dropdown {
+    margin-left: -7rem;
+    }  
+}
+
+@media (max-width: 625px) {
+    .links-dropdown {
+        margin-left: 0;
+    }
+    .langs-dropdown {
+        margin-left: 0;
+    }
+    /* .links-dropdown, .langs-dropdown {
+        transition: 0.5s;
+    } */
+}
