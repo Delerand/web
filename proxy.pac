@@ -1,10 +1,12 @@
 var direct = 'DIRECT';
-var proxy = 'PROXY 212.102.150.145:8000';
+var proxy = 'PROXY 45.89.231.182:64406';
 
 var site_list = [
 	"spotify.com",
 	"crunchyroll.com",
-    	"tiktok.com"
+    	"tiktok.com",
+	"youtube.com",
+	"googlevideo.com"
 ];
 
 var site = {};
