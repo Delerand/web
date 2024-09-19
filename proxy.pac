@@ -9,7 +9,7 @@ var site_list = [
 	".googlevideo.com",
 	".yt3.ggpht.com",
 	".ytimg.com",
-	".myop.com"
+	".myip.com"
 ];
 
 var site = {};
