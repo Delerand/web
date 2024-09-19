@@ -1,5 +1,5 @@
 var direct = 'DIRECT';
-var proxy = 'PROXY 45.89.231.182:64406';
+var proxy = 'PROXY myCWrPJ3:XXXwKb4x@185.58.112.239:63094';
 
 var site_list = [
 	"spotify.com",
