@@ -2,11 +2,14 @@ var direct = 'DIRECT';
 var proxy = 'PROXY myCWrPJ3:XXXwKb4x@185.58.112.239:63094';
 
 var site_list = [
-	"*.spotify.com",
-	"*.crunchyroll.com",
-    	"*.tiktok.com",
-	"*.youtube.com",
-	"*.googlevideo.com"
+	".spotify.com",
+	".crunchyroll.com",
+    	".tiktok.com",
+	".youtube.com",
+	".googlevideo.com",
+	".yt3.ggpht.com",
+	".ytimg.com",
+	".myop.com"
 ];
 
 var site = {};
