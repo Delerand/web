@@ -1,0 +1,24 @@
+proxies:
+    # socks5
+  - name: "by"
+    type: socks5
+    server: 185.58.112.239
+    port: 63095
+    username: myCWrPJ3
+    password: XXXwKb4x
+    # tls: true
+    # skip-cert-verify: true
+    # udp: true
+
+  - name: "pl"
+    type: socks5
+    server: 50.114.189.99
+    port: 63837
+    username: myCWrPJ3
+    password: XXXwKb4x
+    # tls: true
+    # skip-cert-verify: true
+    # udp: true
+
+rules:
+  - DOMAIN,crunchyroll.com,by
