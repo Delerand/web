@@ -96,7 +96,7 @@ rules:
   - DOMAIN-SUFFIX,googleusercontent.com,by
 
   # Discord
-  - DOMAIN-KEYWORD,discord,by
+  - DOMAIN-KEYWORD,discord,tx
 
   # -- Google -- 
 
