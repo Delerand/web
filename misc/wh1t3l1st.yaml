@@ -1,0 +1,154 @@
+# Port of HTTP(S) proxy server on the local end
+port: 7890
+
+# Port of SOCKS5 proxy server on the local end
+socks-port: 7891
+mode: rule
+external-controller: 127.0.0.1:9090
+
+hosts:
+  '*.instagram.com': 157.240.225.174
+  '*.cdninstagram.com': 31.13.72.53
+
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  # ipv6: false # when the false, response to AAAA questions will be empty
+
+  # These nameservers are used to resolve the DNS nameserver hostnames below.
+  # Specify IP addresses only
+  default-nameserver:
+    - 1.1.1.1
+    - 8.8.8.8
+
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - tls://1.1.1.1:853
+    - https://dns.google/dns-query
+
+proxies:
+    # socks5
+  - name: "by"
+    type: socks5
+    server: 185.58.112.239
+    port: 63095
+    username: myCWrPJ3
+    password: XXXwKb4x
+    # tls: true
+    # skip-cert-verify: true
+    udp: true
+
+    # socks5
+  - name: "tx"
+    type: socks5
+    server: 172.120.238.121
+    port: 62723
+    username: myCWrPJ3
+    password: XXXwKb4x
+    # tls: true
+    # skip-cert-verify: true
+    udp: true
+
+rules:
+
+  # ---- Block ads ---
+  # - DOMAIN-SUFFIX,an.yandex.ru,REJECT
+  # - DOMAIN-SUFFIX,yastatic.net,REJECT
+  # - DOMAIN-SUFFIX,mc.yandex.ru,REJECT
+  # - DOMAIN-SUFFIX,uuas.yandex.ru,REJECT
+  # - DOMAIN-SUFFIX,adfox.ru,REJECT
+
+  # ---- Belarus ----
+  # Random services 
+  - DOMAIN-SUFFIX,2ip.ru,by
+  - DOMAIN-SUFFIX,ntc.party,by
+  - DOMAIN-KEYWORD,ficbook,by
+  - DOMAIN-KEYWORD,ongaca,DIRECT
+  - DOMAIN-SUFFIX,cambridge.org,by
+  - DOMAIN-SUFFIX,postimg.org,by
+  - DOMAIN-KEYWORD,hostinger,by
+  - DOMAIN-SUFFIX,windscribe.com,by
+  - DOMAIN-SUFFIX,renshuu.org,by
+  - DOMAIN-SUFFIX,bootstrapcdn.com,by
+  - DOMAIN-KEYWORD,anki,by
+  - DOMAIN-SUFFIX,ppy.sh,DIRECT
+  - DOMAIN-SUFFIX,reddit.com,DIRECT
+  - DOMAIN-SUFFIX,redd.it,DIRECT
+  - DOMAIN-KEYWORD,pinterest,by
+  - DOMAIN-SUFFIX,pin.it,by
+
+  - DOMAIN-KEYWORD,jut-su,by
+  - DOMAIN-KEYWORD,jut-zu,by
+  - DOMAIN-KEYWORD,jutsu,by
+  - DOMAIN-SUFFIX,jut.su,by
+  - DOMAIN-KEYWORD,animego,by
+  - DOMAIN-SUFFIX,hianime.to,by
+  - DOMAIN-SUFFIX,noitatnemucod.net,by
+  - DOMAIN-KEYWORD,megacloud,by
+
+  - DOMAIN-SUFFIX,bsky.app,by
+  - DOMAIN-SUFFIX,jsdelivr.net,by
+  - DOMAIN-SUFFIX,janitorai.com,by
+
+  # YouTube
+  - DOMAIN-SUFFIX,youtube.com,by
+  - DOMAIN-SUFFIX,youtu.be,by
+  - DOMAIN-SUFFIX,ytimg.com,by
+  - DOMAIN-SUFFIX,youtube-nocookie.com,by
+  - DOMAIN-SUFFIX,googlevideo.com,by
+  - DOMAIN-SUFFIX,ggpht.com,by
+  - DOMAIN-SUFFIX,googleusercontent.com,by
+
+  # Discord
+  - DOMAIN-KEYWORD,discord,by
+
+  # -- Google -- 
+
+  # - DOMAIN-KEYWORD,play-fe.googleapis.com,tx
+  # - DOMAIN-KEYWORD,play.google.com,tx
+  - DOMAIN-KEYWORD,play.google.ru,tx
+  - DOMAIN-SUFFIX,gvt1.com,by
+  - DOMAIN-SUFFIX,google.com,tx
+  # - DOMAIN-KEYWORD,google,by
+  - DOMAIN-SUFFIX,maps.googleapis.com,DIRECT
+  - DOMAIN-SUFFIX,streetviewpixels-pa.googleapis.com,DIRECT
+  - DOMAIN-SUFFIX,youtubei.googleapis.com,by
+  - DOMAIN-SUFFIX,googleapis.com,tx
+  - DOMAIN-SUFFIX,labs.google,tx
+  - DOMAIN-SUFFIX,googleusercontent.com,by
+
+  # Telegram
+  - IP-CIDR,91.108.56.0/22,DIRECT
+  - IP-CIDR,91.108.4.0/22,DIRECT
+  - IP-CIDR,91.108.8.0/22,DIRECT
+  - IP-CIDR,91.108.16.0/22,DIRECT
+  - IP-CIDR,91.108.12.0/22,DIRECT
+  - IP-CIDR,149.154.160.0/20,DIRECT
+  - IP-CIDR,91.105.192.0/23,DIRECT
+  - IP-CIDR,91.108.20.0/22,DIRECT
+  - IP-CIDR,185.76.151.0/24,DIRECT
+  - IP-CIDR6,2001:b28:f23d::/48,DIRECT
+  - IP-CIDR6,2001:b28:f23f::/48,DIRECT
+  - IP-CIDR6,2001:67c:4e8::/48,DIRECT
+  - IP-CIDR6,2001:b28:f23c::/48,DIRECT
+  - IP-CIDR6,2a0a:f280::/32,DIRECT
+
+  # Other
+  - DOMAIN-SUFFIX,nytimes.com,DIRECT
+
+  # AdBlock
+  - DOMAIN-KEYWORD,doubleclick,REJECT
+  - DOMAIN-KEYWORD,googleadservices,REJECT
+  - DOMAIN-KEYWORD,adsense,REJECT
+  - DOMAIN-KEYWORD,googlesyndication,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,googletag,REJECT
+
+  # Rest
+  - GEOIP,RU,DIRECT
+  - GEOIP,BY,DIRECT
+  - MATCH,tx
+
