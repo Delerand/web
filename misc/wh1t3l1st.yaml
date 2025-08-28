@@ -54,13 +54,6 @@ proxies:
 
 rules:
 
-  # ---- Block ads ---
-  # - DOMAIN-SUFFIX,an.yandex.ru,REJECT
-  # - DOMAIN-SUFFIX,yastatic.net,REJECT
-  # - DOMAIN-SUFFIX,mc.yandex.ru,REJECT
-  # - DOMAIN-SUFFIX,uuas.yandex.ru,REJECT
-  # - DOMAIN-SUFFIX,adfox.ru,REJECT
-
   # ---- Belarus ----
   # Random services 
   - DOMAIN-SUFFIX,2ip.ru,by
