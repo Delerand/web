@@ -60,6 +60,7 @@ rules:
   - DOMAIN-SUFFIX,ntc.party,by
   - DOMAIN-KEYWORD,ficbook,by
   - DOMAIN-KEYWORD,ongaca,DIRECT
+  - DOMAIN-KEYWORD,xhamst,DIRECT
   - DOMAIN-SUFFIX,cambridge.org,by
   - DOMAIN-SUFFIX,postimg.org,by
   - DOMAIN-KEYWORD,hostinger,by
@@ -131,6 +132,9 @@ rules:
 
   # Other
   - DOMAIN-SUFFIX,nytimes.com,DIRECT
+  - IP-CIDR,185.58.112.239/32,DIRECT
+  - IP-CIDR,172.120.238.121/32,DIRECT
+  
 
   # AdBlock
   - DOMAIN-KEYWORD,doubleclick,REJECT
