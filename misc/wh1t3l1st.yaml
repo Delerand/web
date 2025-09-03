@@ -147,6 +147,7 @@ rules:
   - DOMAIN-KEYWORD,googletag,REJECT
 
   # Rest
+  - DOMAIN-SUFFIX,ru,DIRECT
   - GEOIP,RU,DIRECT
   - GEOIP,BY,DIRECT
   - MATCH,tx
