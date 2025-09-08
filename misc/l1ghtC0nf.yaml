@@ -109,3 +109,4 @@ rules:
   - DOMAIN-KEYWORD,whatsapp,tx
   - DOMAIN-SUFFIX,wa.me,tx
   - DOMAIN-SUFFIX,wl.co,tx
+  - DOMAIN-SUFFIX,mtalk.google.com,tx
