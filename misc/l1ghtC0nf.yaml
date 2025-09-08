@@ -110,3 +110,7 @@ rules:
   - DOMAIN-SUFFIX,wa.me,tx
   - DOMAIN-SUFFIX,wl.co,tx
   - DOMAIN-SUFFIX,mtalk.google.com,tx
+  - DOMAIN-KEYWORD,facebook,tx
+  - DOMAIN-KEYWORD,fbcdn,tx
+  - DOMAIN-SUFFIX,fb.com,tx
+  
