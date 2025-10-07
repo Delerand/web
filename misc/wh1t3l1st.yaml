@@ -136,6 +136,8 @@ rules:
   - IP-CIDR,172.120.238.121/32,DIRECT
   - DOMAIN-KEYWORD,yandex,DIRECT
   - DOMAIN-KEYWORD,kaspersky,DIRECT
+  - DOMAIN-KEYWORD,duolingo,DIRECT
+  - DOMAIN-KEYWORD,soundcloud,by
 
   # Whatsapp
   - IP-CIDR,57.141.0.0/16,tx
