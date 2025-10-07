@@ -138,6 +138,7 @@ rules:
   - DOMAIN-KEYWORD,kaspersky,DIRECT
   - DOMAIN-KEYWORD,duolingo,DIRECT
   - DOMAIN-KEYWORD,soundcloud,by
+  - DOMAIN-KEYWORD,speech.platform.bing.com,DIRECT
 
   # Whatsapp
   - IP-CIDR,57.141.0.0/16,tx
