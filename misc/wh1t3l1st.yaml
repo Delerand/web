@@ -131,7 +131,7 @@ rules:
   # Other
   - DOMAIN-SUFFIX,nytimes.com,DIRECT
   - DOMAIN-KEYWORD,ongaca,DIRECT
-  - DOMAIN-KEYWORD,xhamst,DIRECT
+  - DOMAIN-KEYWORD,xhamst,by
   - IP-CIDR,185.58.112.239/32,DIRECT
   - IP-CIDR,172.120.238.121/32,DIRECT
   - DOMAIN-KEYWORD,yandex,DIRECT
@@ -376,13 +376,17 @@ rules:
   - IP-CIDR,185.60.219.60/31,tx
   
 
-  # AdBlock
+  # Filter
   - DOMAIN-KEYWORD,doubleclick,REJECT
   - DOMAIN-KEYWORD,googleadservices,REJECT
   - DOMAIN-KEYWORD,adsense,REJECT
   - DOMAIN-KEYWORD,googlesyndication,REJECT
   - DOMAIN-KEYWORD,adservice,REJECT
   - DOMAIN-KEYWORD,googletag,REJECT
+  - DOMAIN-KEYWORD,roblox,REJECT
+  - DOMAIN-KEYWORD,rbxcdn,REJECT
+  - DOMAIN-KEYWORD,rbxinfra,REJECT
+  - DOMAIN-KEYWORD,rbxtrk,REJECT
 
   # Rest
   - DOMAIN-SUFFIX,ru,DIRECT
