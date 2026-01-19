@@ -80,7 +80,7 @@ rules:
   - DOMAIN-SUFFIX,renshuu.org,by
   - DOMAIN-SUFFIX,bootstrapcdn.com,by
   - DOMAIN-KEYWORD,anki,by
-  - DOMAIN-SUFFIX,ppy.sh,DIRECT
+  - DOMAIN-SUFFIX,ppy.sh,by
   - DOMAIN-SUFFIX,reddit.com,DIRECT
   - DOMAIN-SUFFIX,redd.it,DIRECT
   - DOMAIN-KEYWORD,pinterest,by
@@ -115,36 +115,43 @@ rules:
 
   # - DOMAIN-KEYWORD,play-fe.googleapis.com,VL_US
   # - DOMAIN-KEYWORD,play.google.com,VL_US
-  - DOMAIN-KEYWORD,play.google.ru,VL_US
+  - DOMAIN-KEYWORD,play.google.ru,tx
   - DOMAIN-SUFFIX,gvt1.com,by
-  - DOMAIN-SUFFIX,google.com,VL_US
+  - DOMAIN-SUFFIX,google.com,tx
   # - DOMAIN-KEYWORD,google,by
   - DOMAIN-SUFFIX,maps.googleapis.com,DIRECT
   - DOMAIN-SUFFIX,streetviewpixels-pa.googleapis.com,DIRECT
   - DOMAIN-SUFFIX,youtubei.googleapis.com,by
-  - DOMAIN-SUFFIX,googleapis.com,VL_US
-  - DOMAIN-SUFFIX,labs.google,VL_US
+  - DOMAIN-SUFFIX,googleapis.com,tx
+  - DOMAIN-SUFFIX,labs.google,tx
   - DOMAIN-SUFFIX,googleusercontent.com,by
 
   # Telegram
-  - IP-CIDR,91.108.56.0/22,DIRECT
-  - IP-CIDR,91.108.4.0/22,DIRECT
-  - IP-CIDR,91.108.8.0/22,DIRECT
-  - IP-CIDR,91.108.16.0/22,DIRECT
-  - IP-CIDR,91.108.12.0/22,DIRECT
-  - IP-CIDR,149.154.160.0/20,DIRECT
-  - IP-CIDR,91.105.192.0/23,DIRECT
-  - IP-CIDR,91.108.20.0/22,DIRECT
-  - IP-CIDR,185.76.151.0/24,DIRECT
-  - IP-CIDR6,2001:b28:f23d::/48,DIRECT
-  - IP-CIDR6,2001:b28:f23f::/48,DIRECT
-  - IP-CIDR6,2001:67c:4e8::/48,DIRECT
-  - IP-CIDR6,2001:b28:f23c::/48,DIRECT
-  - IP-CIDR6,2a0a:f280::/32,DIRECT
+  - IP-CIDR,91.108.56.0/22,by
+  - IP-CIDR,91.108.4.0/22,by
+  - IP-CIDR,91.108.8.0/22,by
+  - IP-CIDR,91.108.16.0/22,by
+  - IP-CIDR,91.108.12.0/22,by
+  - IP-CIDR,149.154.160.0/20,by
+  - IP-CIDR,91.105.192.0/23,by
+  - IP-CIDR,91.108.20.0/22,by
+  - IP-CIDR,185.76.151.0/24,by
+  - IP-CIDR6,2001:b28:f23d::/48,by
+  - IP-CIDR6,2001:b28:f23f::/48,by
+  - IP-CIDR6,2001:67c:4e8::/48,by
+  - IP-CIDR6,2001:b28:f23c::/48,by
+  - IP-CIDR6,2a0a:f280::/32,by
+
+  # Meta
+  - DOMAIN-KEYWORD,insta,VL_US
+  - DOMAIN-SUFFIX,ig.me,VL_US
+  - DOMAIN-SUFFIX,igsonar.com,VL_US
+  - DOMAIN-SUFFIX,fb.com,VL_US
+  - DOMAIN-KEYWORD,facebook,VL_US
 
   # Other
   - DOMAIN-SUFFIX,nytimes.com,DIRECT
-  - DOMAIN-KEYWORD,ongaca,DIRECT
+  - DOMAIN-KEYWORD,ongaca,by
   - DOMAIN-KEYWORD,xhamst,by
   - IP-CIDR,185.58.112.239/32,DIRECT
   - IP-CIDR,172.120.238.121/32,DIRECT
@@ -155,6 +162,10 @@ rules:
   - DOMAIN-KEYWORD,speech.platform.bing.com,DIRECT
 
   # Whatsapp
+  - DOMAIN-KEYWORD,whatsapp,VL_US
+  - DOMAIN-SUFFIX,wa.me,VL_US
+  - DOMAIN-SUFFIX,wl.co,VL_US
+
   - IP-CIDR,57.141.0.0/16,VL_US
   - IP-CIDR,57.142.0.0/15,VL_US
   - IP-CIDR,57.144.0.0/14,VL_US
@@ -406,4 +417,5 @@ rules:
   - DOMAIN-SUFFIX,ru,DIRECT
   - GEOIP,RU,DIRECT
   - GEOIP,BY,DIRECT
-  - MATCH,VL_US
+  - MATCH,tx
+
