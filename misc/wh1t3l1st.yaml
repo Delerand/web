@@ -37,7 +37,7 @@ proxies:
     port: 63095
     username: myCWrPJ3
     password: XXXwKb4x
-    tls: true
+    # tls: true
     # skip-cert-verify: true
     udp: true
 
@@ -48,7 +48,7 @@ proxies:
     port: 62723
     username: myCWrPJ3
     password: XXXwKb4x
-    tls: true
+    # tls: true
     # skip-cert-verify: true
     udp: true
 
