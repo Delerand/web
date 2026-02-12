@@ -37,7 +37,7 @@ proxies:
     port: 63095
     username: myCWrPJ3
     password: XXXwKb4x
-    # tls: true
+    tls: true
     # skip-cert-verify: true
     udp: true
 
@@ -48,7 +48,7 @@ proxies:
     port: 62723
     username: myCWrPJ3
     password: XXXwKb4x
-    # tls: true
+    tls: true
     # skip-cert-verify: true
     udp: true
 
@@ -64,6 +64,21 @@ proxies:
     reality-opts:
       public-key: "2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0"
       short-id: "86b80f1e713a33ad"
+    client-fingerprint: chrome
+
+  - name: "VL_NL"
+    type: vless
+    server: nld.pink-service.ru
+    port: 443
+    uuid: c465365d-f622-4c3c-ab0d-97e79a2e864b
+    flow: xtls-rprx-vision
+    network: tcp
+    udp: true
+    tls: true
+    reality-opts:
+      public-key: 2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0
+      short-id: 86b80f1e713a33ad
+    servername: www.google.com
     client-fingerprint: chrome
 
 rules:
@@ -127,20 +142,20 @@ rules:
   - DOMAIN-SUFFIX,googleusercontent.com,by
 
   # Telegram
-  - IP-CIDR,91.108.56.0/22,by
-  - IP-CIDR,91.108.4.0/22,by
-  - IP-CIDR,91.108.8.0/22,by
-  - IP-CIDR,91.108.16.0/22,by
-  - IP-CIDR,91.108.12.0/22,by
-  - IP-CIDR,149.154.160.0/20,by
-  - IP-CIDR,91.105.192.0/23,by
-  - IP-CIDR,91.108.20.0/22,by
-  - IP-CIDR,185.76.151.0/24,by
-  - IP-CIDR6,2001:b28:f23d::/48,by
-  - IP-CIDR6,2001:b28:f23f::/48,by
-  - IP-CIDR6,2001:67c:4e8::/48,by
-  - IP-CIDR6,2001:b28:f23c::/48,by
-  - IP-CIDR6,2a0a:f280::/32,by
+  - IP-CIDR,91.108.56.0/22,VL_NL
+  - IP-CIDR,91.108.4.0/22,VL_NL
+  - IP-CIDR,91.108.8.0/22,VL_NL
+  - IP-CIDR,91.108.16.0/22,VL_NL
+  - IP-CIDR,91.108.12.0/22,VL_NL
+  - IP-CIDR,149.154.160.0/20,VL_NL
+  - IP-CIDR,91.105.192.0/23,VL_NL
+  - IP-CIDR,91.108.20.0/22,VL_NL
+  - IP-CIDR,185.76.151.0/24,VL_NL
+  - IP-CIDR6,2001:b28:f23d::/48,VL_NL
+  - IP-CIDR6,2001:b28:f23f::/48,VL_NL
+  - IP-CIDR6,2001:67c:4e8::/48,VL_NL
+  - IP-CIDR6,2001:b28:f23c::/48,VL_NL
+  - IP-CIDR6,2a0a:f280::/32,VL_NL
 
   # Meta
   - DOMAIN-KEYWORD,insta,VL_US
@@ -160,6 +175,7 @@ rules:
   - DOMAIN-KEYWORD,duolingo,DIRECT
   - DOMAIN-KEYWORD,soundcloud,by
   - DOMAIN-KEYWORD,speech.platform.bing.com,DIRECT
+  - DOMAIN-KEYWORD,hinative,VL_NL
 
   # Whatsapp
   - DOMAIN-KEYWORD,whatsapp,VL_US
@@ -418,4 +434,3 @@ rules:
   - GEOIP,RU,DIRECT
   - GEOIP,BY,DIRECT
   - MATCH,tx
-
