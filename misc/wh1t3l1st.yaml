@@ -42,7 +42,7 @@ proxies:
     udp: true
 
     # socks5
-  - name: "tx"
+  - name: "tx" 
     type: socks5
     server: 172.120.238.121
     port: 62723
@@ -114,6 +114,10 @@ rules:
   - DOMAIN-SUFFIX,jsdelivr.net,by
   - DOMAIN-SUFFIX,janitorai.com,by
 
+  - DOMAIN-KEYWORD,bybit,by
+  - DOMAIN-KEYWORD,bytick,by
+  - DOMAIN-KEYWORD,binance,by
+
   # YouTube
   - DOMAIN-SUFFIX,youtube.com,by
   - DOMAIN-SUFFIX,youtu.be,by
@@ -158,11 +162,11 @@ rules:
   - IP-CIDR6,2a0a:f280::/32,VL_NL
 
   # Meta
-  - DOMAIN-KEYWORD,insta,VL_US
-  - DOMAIN-SUFFIX,ig.me,VL_US
-  - DOMAIN-SUFFIX,igsonar.com,VL_US
-  - DOMAIN-SUFFIX,fb.com,VL_US
-  - DOMAIN-KEYWORD,facebook,VL_US
+  - DOMAIN-KEYWORD,insta,VL_NL
+  - DOMAIN-SUFFIX,ig.me,VL_NL
+  - DOMAIN-SUFFIX,igsonar.com,VL_NL
+  - DOMAIN-SUFFIX,fb.com,VL_NL
+  - DOMAIN-KEYWORD,facebook,VL_NL
 
   # Other
   - DOMAIN-SUFFIX,nytimes.com,DIRECT
@@ -173,9 +177,11 @@ rules:
   - DOMAIN-KEYWORD,yandex,DIRECT
   - DOMAIN-KEYWORD,kaspersky,DIRECT
   - DOMAIN-KEYWORD,duolingo,DIRECT
-  - DOMAIN-KEYWORD,soundcloud,by
+  - DOMAIN-KEYWORD,soundcloud,VL_NL
   - DOMAIN-KEYWORD,speech.platform.bing.com,DIRECT
   - DOMAIN-KEYWORD,hinative,VL_NL
+  - DOMAIN-KEYWORD,myanimelist,VL_NL
+
 
   # Whatsapp
   - DOMAIN-KEYWORD,whatsapp,VL_US
