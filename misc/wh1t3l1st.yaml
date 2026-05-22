@@ -82,6 +82,17 @@ proxies:
     servername: pol-game.pink-service.ru
     client-fingerprint: chrome
 
+proxy-groups:
+  - name: US_PL_fb
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 180
+    timeout: 3000
+    lazy: true
+    proxies:
+      - tx
+      - VL_PL
+
 rules:
 
   # ---- Belarus ----
@@ -135,15 +146,15 @@ rules:
 
   # - DOMAIN-KEYWORD,play-fe.googleapis.com,VL_PL
   # - DOMAIN-KEYWORD,play.google.com,VL_PL
-  - DOMAIN-KEYWORD,play.google.ru,tx
+  - DOMAIN-KEYWORD,play.google.ru,US_PL_fb
   - DOMAIN-SUFFIX,gvt1.com,by
-  - DOMAIN-SUFFIX,google.com,tx
+  - DOMAIN-SUFFIX,google.com,US_PL_fb
   # - DOMAIN-KEYWORD,google,by
   - DOMAIN-SUFFIX,maps.googleapis.com,DIRECT
   - DOMAIN-SUFFIX,streetviewpixels-pa.googleapis.com,DIRECT
   - DOMAIN-SUFFIX,youtubei.googleapis.com,by
-  - DOMAIN-SUFFIX,googleapis.com,tx
-  - DOMAIN-SUFFIX,labs.google,tx
+  - DOMAIN-SUFFIX,googleapis.com,US_PL_fb
+  - DOMAIN-SUFFIX,labs.google,US_PL_fb
   - DOMAIN-SUFFIX,googleusercontent.com,by
 
   # Telegram
@@ -440,4 +451,4 @@ rules:
   - DOMAIN-SUFFIX,ru,DIRECT
   - GEOIP,RU,DIRECT
   - GEOIP,BY,DIRECT
-  - MATCH,tx
+  - MATCH,US_PL_fb
