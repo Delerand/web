@@ -82,11 +82,26 @@ proxies:
     servername: pol-game.pink-service.ru
     client-fingerprint: chrome
 
+  - name: "VL_RU"
+    type: vless
+    server: 195.133.73.248
+    port: 443
+    uuid: c465365d-f622-4c3c-ab0d-97e79a2e864b
+    flow: xtls-rprx-vision
+    network: tcp
+    udp: true
+    tls: true
+    reality-opts:
+      public-key: 2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0
+      short-id: 86b80f1e713a33ad
+    servername: yandex.net
+    client-fingerprint: chrome
+
 proxy-groups:
   - name: US_PL_fb
     type: fallback
     url: https://www.gstatic.com/generate_204
-    interval: 120
+    interval: 180
     timeout: 3000
     lazy: true
     proxies:
@@ -97,47 +112,47 @@ rules:
 
   # ---- Belarus ----
   # Random services 
-  - DOMAIN-SUFFIX,2ip.ru,by
-  - DOMAIN-SUFFIX,ntc.party,by
-  - DOMAIN-KEYWORD,ficbook,by
-  - DOMAIN-SUFFIX,cambridge.org,by
-  - DOMAIN-SUFFIX,postimg.org,by
-  - DOMAIN-KEYWORD,hostinger,by
-  - DOMAIN-SUFFIX,windscribe.com,by
-  - DOMAIN-SUFFIX,renshuu.org,by
-  - DOMAIN-SUFFIX,bootstrapcdn.com,by
-  - DOMAIN-KEYWORD,anki,by
-  - DOMAIN-SUFFIX,ppy.sh,by
+  - DOMAIN-SUFFIX,2ip.ru,VL_RU
+  - DOMAIN-SUFFIX,ntc.party,VL_RU
+  - DOMAIN-KEYWORD,ficbook,VL_RU
+  - DOMAIN-SUFFIX,cambridge.org,VL_RU
+  - DOMAIN-SUFFIX,postimg.org,VL_RU
+  - DOMAIN-KEYWORD,hostinger,VL_RU
+  - DOMAIN-SUFFIX,windscribe.com,VL_RU
+  - DOMAIN-SUFFIX,renshuu.org,VL_RU
+  - DOMAIN-SUFFIX,bootstrapcdn.com,VL_RU
+  - DOMAIN-KEYWORD,anki,VL_RU
+  - DOMAIN-SUFFIX,ppy.sh,VL_RU
   - DOMAIN-SUFFIX,reddit.com,DIRECT
   - DOMAIN-SUFFIX,redd.it,DIRECT
-  - DOMAIN-KEYWORD,pinterest,by
-  - DOMAIN-SUFFIX,pin.it,by
+  - DOMAIN-KEYWORD,pinterest,VL_RU
+  - DOMAIN-SUFFIX,pin.it,VL_RU
 
-  - DOMAIN-KEYWORD,jut-su,by
-  - DOMAIN-KEYWORD,jut-zu,by
-  - DOMAIN-KEYWORD,jutsu,by
-  - DOMAIN-SUFFIX,jut.su,by
-  - DOMAIN-KEYWORD,animego,by
-  - DOMAIN-SUFFIX,hianime.to,by
-  - DOMAIN-SUFFIX,noitatnemucod.net,by
-  - DOMAIN-KEYWORD,megacloud,by
+  - DOMAIN-KEYWORD,jut-su,VL_RU
+  - DOMAIN-KEYWORD,jut-zu,VL_RU
+  - DOMAIN-KEYWORD,jutsu,VL_RU
+  - DOMAIN-SUFFIX,jut.su,VL_RU
+  - DOMAIN-KEYWORD,animego,VL_RU
+  - DOMAIN-SUFFIX,hianime.to,VL_RU
+  - DOMAIN-SUFFIX,noitatnemucod.net,VL_RU
+  - DOMAIN-KEYWORD,megacloud,VL_RU
 
-  - DOMAIN-SUFFIX,bsky.app,by
-  - DOMAIN-SUFFIX,jsdelivr.net,by
-  - DOMAIN-SUFFIX,janitorai.com,by
+  - DOMAIN-SUFFIX,bsky.app,VL_RU
+  - DOMAIN-SUFFIX,jsdelivr.net,VL_RU
+  - DOMAIN-SUFFIX,janitorai.com,VL_RU
 
-  - DOMAIN-KEYWORD,bybit,by
-  - DOMAIN-KEYWORD,bytick,by
-  - DOMAIN-KEYWORD,binance,by
+  - DOMAIN-KEYWORD,VL_RUbit,VL_RU
+  - DOMAIN-KEYWORD,VL_RUtick,VL_RU
+  - DOMAIN-KEYWORD,binance,VL_RU
 
   # YouTube
-  - DOMAIN-SUFFIX,youtube.com,by
-  - DOMAIN-SUFFIX,youtu.be,by
-  - DOMAIN-SUFFIX,ytimg.com,by
-  - DOMAIN-SUFFIX,youtube-nocookie.com,by
-  - DOMAIN-SUFFIX,googlevideo.com,by
-  - DOMAIN-SUFFIX,ggpht.com,by
-  - DOMAIN-SUFFIX,googleusercontent.com,by
+  - DOMAIN-SUFFIX,youtube.com,VL_RU
+  - DOMAIN-SUFFIX,youtu.be,VL_RU
+  - DOMAIN-SUFFIX,ytimg.com,VL_RU
+  - DOMAIN-SUFFIX,youtube-nocookie.com,VL_RU
+  - DOMAIN-SUFFIX,googlevideo.com,VL_RU
+  - DOMAIN-SUFFIX,ggpht.com,VL_RU
+  - DOMAIN-SUFFIX,googleusercontent.com,VL_RU
 
   # Discord
   - DOMAIN-KEYWORD,discord,VL_PL
@@ -147,15 +162,15 @@ rules:
   # - DOMAIN-KEYWORD,play-fe.googleapis.com,VL_PL
   # - DOMAIN-KEYWORD,play.google.com,VL_PL
   - DOMAIN-KEYWORD,play.google.ru,US_PL_fb
-  - DOMAIN-SUFFIX,gvt1.com,by
+  - DOMAIN-SUFFIX,gvt1.com,VL_RU
   - DOMAIN-SUFFIX,google.com,US_PL_fb
-  # - DOMAIN-KEYWORD,google,by
+  # - DOMAIN-KEYWORD,google,VL_RU
   - DOMAIN-SUFFIX,maps.googleapis.com,DIRECT
   - DOMAIN-SUFFIX,streetviewpixels-pa.googleapis.com,DIRECT
-  - DOMAIN-SUFFIX,youtubei.googleapis.com,by
+  - DOMAIN-SUFFIX,youtubei.googleapis.com,VL_RU
   - DOMAIN-SUFFIX,googleapis.com,US_PL_fb
   - DOMAIN-SUFFIX,labs.google,US_PL_fb
-  - DOMAIN-SUFFIX,googleusercontent.com,by
+  - DOMAIN-SUFFIX,googleusercontent.com,VL_RU
 
   # Telegram
   - IP-CIDR,91.108.56.0/22,VL_PL
@@ -182,8 +197,8 @@ rules:
 
   # Other
   - DOMAIN-SUFFIX,nytimes.com,DIRECT
-  - DOMAIN-KEYWORD,ongaca,by
-  - DOMAIN-KEYWORD,xhamst,by
+  - DOMAIN-KEYWORD,ongaca,VL_RU
+  - DOMAIN-KEYWORD,xhamst,VL_RU
   - IP-CIDR,185.58.112.239/32,DIRECT
   - IP-CIDR,172.120.238.121/32,DIRECT
   - DOMAIN-KEYWORD,yandex,DIRECT
@@ -442,10 +457,10 @@ rules:
   - DOMAIN-KEYWORD,googlesyndication,REJECT
   - DOMAIN-KEYWORD,adservice,REJECT
   - DOMAIN-KEYWORD,googletag,REJECT
-  - DOMAIN-KEYWORD,roblox,REJECT
-  - DOMAIN-KEYWORD,rbxcdn,REJECT
-  - DOMAIN-KEYWORD,rbxinfra,REJECT
-  - DOMAIN-KEYWORD,rbxtrk,REJECT
+  # - DOMAIN-KEYWORD,roblox,REJECT
+  # - DOMAIN-KEYWORD,rbxcdn,REJECT
+  # - DOMAIN-KEYWORD,rbxinfra,REJECT
+  # - DOMAIN-KEYWORD,rbxtrk,REJECT
 
   # Rest
   - DOMAIN-SUFFIX,ru,DIRECT
