@@ -236,8 +236,7 @@ proxy-groups:
       - VL_DE
       - VL_SE
       - VL_PL
-
-proxy-groups:
+  
   - name: VL_RF_FB
     type: fallback
     url: https://www.gstatic.com/generate_204
