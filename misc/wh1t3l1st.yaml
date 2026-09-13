@@ -244,8 +244,6 @@ proxy-groups:
     timeout: 3000
     lazy: true
     proxies:
-      - VL_RU
-      - VL_FLD_RU
       - VL_EST_RU
       - VL_SWE_RU
       - VL_GER_RU
